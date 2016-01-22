@@ -1,3 +1,5 @@
+﻿//test
+﻿
 ﻿function Sum(): void {
     var x = + document.getElementById("x").value;
     var y = + document.getElementById("y").value;
