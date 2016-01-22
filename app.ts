@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+﻿//test 2
+﻿
+>>>>>>> 193d008a81c20cd3232d994dd7a18a1b9a4a402e
 ﻿function Sum(): void {
     var x = + document.getElementById("x").value;
     var y = + document.getElementById("y").value;
