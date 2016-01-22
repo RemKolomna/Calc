@@ -1,4 +1,4 @@
-﻿//test
+﻿//test 2
 ﻿
 ﻿function Sum(): void {
     var x = + document.getElementById("x").value;
