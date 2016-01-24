@@ -1,1 +1,1 @@
-Test
+Simple calculation in a typescript
