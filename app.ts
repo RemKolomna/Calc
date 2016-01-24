@@ -1,54 +1,22 @@
-<<<<<<< HEAD
-=======
-﻿//test 2
-﻿
->>>>>>> 193d008a81c20cd3232d994dd7a18a1b9a4a402e
-﻿function Sum(): void {
-    var x = + document.getElementById("x").value;
-    var y = + document.getElementById("y").value;
-    var a = document.getElementById("answer");
-    if (document.getElementById("x").value == "")
-        a.value = "" + ((+ a.value) + y);
-    else if (document.getElementById("y").value == "")
-        a.value = "" + ((+ a.value) + x);
-    else
-        a.value = "" + (x + y);
+/// <reference path="file1.ts" />
+
+function main(oper: string): void {
+    var CalcObj = new CalcNamespace.Calc(document.getElementById("x"), document.getElementById("y"));
+    var answer = document.getElementById("answer");
+    switch (oper) {
+        case "sum":
+            answer.value = CalcObj.Sum();
+            break;
+        case "mul":
+            answer.value = CalcObj.Mul();
+            break;
+        case "diff":
+            answer.value = CalcObj.Diff();
+            break;
+        case "div":
+            answer.value = CalcObj.Div();
+            break;
+        default:
+            alert("something is wrong");
+    }
 }
-
-function Mul(): void {
-    var x = + document.getElementById("x").value;
-    var y = + document.getElementById("y").value;
-    var a = document.getElementById("answer");
-    if (document.getElementById("x").value == "")
-        a.value = "" + ((+ a.value) * y);
-    else if (document.getElementById("y").value == "")
-        a.value = "" + ((+ a.value) * x);
-    else
-        a.value = "" + (x * y);
-}
-
-function Diff(): void {
-    var x = + document.getElementById("x").value;
-    var y = + document.getElementById("y").value;
-    var a = document.getElementById("answer");
-    if (document.getElementById("x").value == "")
-        a.value = "" + ((+ a.value) - y);
-    else if (document.getElementById("y").value == "")
-        a.value = "" + ((+ a.value) - x);
-    else
-        a.value = "" + (x - y);
-}
-
-function Div(): void {
-    var x = + document.getElementById("x").value;
-    var y = + document.getElementById("y").value;
-    var a = document.getElementById("answer");
-    if (document.getElementById("x").value == "")
-        a.value = "" + ((+ a.value) / y);
-    else if (document.getElementById("y").value == "")
-        a.value = "" + ((+ a.value) / x);
-    else
-        a.value = "" + (x / y);
-}  
-
-
