@@ -1,6 +1,8 @@
-/// <reference path="file1.ts" />
+var file1_1 = require('./file1');
 function main(oper) {
-    var CalcObj = new CalcNamespace.Calc(document.getElementById("x"), document.getElementById("y"));
+    var x = document.getElementById("x");
+    var y = document.getElementById("y");
+    var CalcObj = new file1_1.Calc(x, y);
     var answer = document.getElementById("answer");
     switch (oper) {
         case "sum":

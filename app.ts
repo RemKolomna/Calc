@@ -1,7 +1,9 @@
-/// <reference path="file1.ts" />
+import {Calc} from './file1';
 
 function main(oper: string): void {
-    var CalcObj = new CalcNamespace.Calc(document.getElementById("x"), document.getElementById("y"));
+    var x = document.getElementById("x");
+    var y = document.getElementById("y");
+    var CalcObj = new Calc(x, y);   
     var answer = document.getElementById("answer");
     switch (oper) {
         case "sum":
