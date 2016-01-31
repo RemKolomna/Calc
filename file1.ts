@@ -14,7 +14,7 @@
     Div(): string {
         return "" + (this.x / this.y);
     }
-    constructor(x: HTMLElement, y: HTMLElement) {
+    constructor(x: HTMLInputElement, y: HTMLInputElement) {
         this.x = + x.value;
         this.y = + y.value;
     }

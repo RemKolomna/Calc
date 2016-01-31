@@ -1,10 +1,10 @@
 import {Calc} from './file1';
 
 function main(oper: string): void {
-    var x = document.getElementById("x");
-    var y = document.getElementById("y");
+    var x = <HTMLInputElement>document.getElementById("x");
+    var y = <HTMLInputElement>document.getElementById("y");
     var CalcObj = new Calc(x, y);   
-    var answer = document.getElementById("answer");
+    var answer = <HTMLInputElement>document.getElementById("answer");
     switch (oper) {
         case "sum":
             answer.value = CalcObj.Sum();
@@ -22,3 +22,5 @@ function main(oper: string): void {
             alert("something is wrong");
     }
 }
+
+window["main"] = main;
